@@ -1,7 +1,5 @@
 {
-	"tailwindStylesheet": "./src/index.css",
-	"plugins": ["prettier-plugin-tailwindcss"],
+	"trailingComma": "es5",
 	"useTabs": true,
-	"tabWidth": 4,
-	"editor.insertSpaces": false
+	"tabWidth": 4
 }
