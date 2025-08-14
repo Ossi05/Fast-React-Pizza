@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getAddress } from "./apiGeocoding";
+import { getAddress } from "../../services/apiGeocoding";
 
 function getPosition() {
 	return new Promise(function (resolve, reject) {
@@ -32,6 +32,7 @@ const userSlice = createSlice({
 	initialState,
 	reducers: {
 		updateName(state, action) {
+			console.log("Updating user name:", action.payload);
 			state.username = action.payload;
 		},
 	},
