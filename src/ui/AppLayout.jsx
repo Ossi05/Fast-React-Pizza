@@ -7,7 +7,7 @@ export default function AppLayout() {
 	const navigation = useNavigation();
 	const isLoading = navigation.state === "loading";
 	return (
-		<div className="layout grid h-screen grid-rows-[auto_1fr_auto]">
+		<div className="layout grid h-dvh grid-rows-[auto_1fr_auto]">
 			{isLoading && <Loader />}
 			<Header />
 			<div className="overflow-auto">
