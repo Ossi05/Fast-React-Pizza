@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import DeleteItem from "./DeleteItem";
 
 // {
 // 	pizzaId: 12,
@@ -41,6 +42,8 @@ const cartSlice = createSlice({
 			);
 			item.quantity--;
 			item.totalPrice = item.unitPrice * item.quantity;
+			if (item.quantity === 0)
+				cartSlice.caseReducers.removeItem(state, action);
 		},
 		clearCart(state) {
 			state.cart = [];
