@@ -94,7 +94,7 @@ function CreateOrder() {
 
 						{!position.latitude && !position.longiture && (
 							<Button
-								className="absolute top-[2.16rem] right-1 z-10 sm:top-[0.31rem] sm:right-1"
+								className="absolute top-[2.16rem] right-1 z-10 sm:top-[0.16rem] sm:right-1 md:top-[0.31rem] md:right-1"
 								type="small"
 								disabled={isLoadingAddress}
 								onClick={e => {
@@ -161,7 +161,6 @@ function CreateOrder() {
 export async function action({ request }) {
 	const formData = await request.formData();
 	const data = Object.fromEntries(formData);
-	console.log(data);
 	const order = {
 		...data,
 		cart: JSON.parse(data.cart),
