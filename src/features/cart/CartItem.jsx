@@ -1,12 +1,8 @@
-import { useDispatch } from "react-redux";
-import Button from "../../ui/Button";
 import { formatCurrency } from "../../utils/helpers";
-import { removeItem } from "./cartSlice";
 import DeleteItem from "./DeleteItem";
 
 function CartItem({ item }) {
 	const { pizzaId, name, quantity, totalPrice } = item;
-	const dispatch = useDispatch();
 
 	return (
 		<li className="py-3 sm:flex sm:items-center sm:justify-between">
